@@ -2,6 +2,7 @@ import Navbar from "./components/NavBar/Navbar";
 import CartWidget from "./components/NavBar/CartWidget";
 import Links from "./components/NavBar/Links";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer";
+import ItemCount from "./components/itemCount/ItemCount";
 //import './App.css';
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
         </>
       </Navbar>
       
-      <ItemListContainer />
+      <ItemListContainer>
+        <ItemCount />
+      </ItemListContainer>
     </>
   );
 }
