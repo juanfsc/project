@@ -7,18 +7,28 @@ export default function ItemCount(props) {
     const [count, setCount] = useState(initial);
 
     function handleIncrease(){
-        setCount(Math.min(count +1,stock));
+        setCount(count < stock ? count +1 : stock);
     }
     function handleDecrease(){
-        setCount(Math.max(count -1,0)); 
+        setCount(count > 0 ? count  - 1 : 0); 
     }
     function DecrementButton(props){
-        
+        const {count} = props;
+        let classN = "";
+        if(0 === count){
+            classN = "btn waves-effect waves-light disabled";
+        }
+        else{
+            classN = "btn waves-effect waves-light";
+        }
         return<button onClick={e => handleDecrease()} className={classN}>  <i class="material-icons right ">remove_circle</i></button>
     }
     function IncrementButton(props){
+        const {stock} = props;
+        const {count} = props;
+
         let classN = "";
-        if(0 == props.count){
+        if( stock === count){
             classN = "btn waves-effect waves-light disabled";
         }
         else{

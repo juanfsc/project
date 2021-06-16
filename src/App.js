@@ -1,3 +1,4 @@
+ 
 import Navbar from "./components/NavBar/Navbar";
 import CartWidget from "./components/NavBar/CartWidget";
 import Links from "./components/NavBar/Links";
@@ -26,5 +27,3 @@ function App() {
 
 
 export default App;
-
-
