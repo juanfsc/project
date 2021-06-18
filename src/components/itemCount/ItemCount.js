@@ -7,7 +7,7 @@ export default function ItemCount(props) {
     const [count, setCount] = useState(initial);
 
     function handleIncrease(){
-        setCount(count < stock ? count +1 : stock);
+        setCount(Math.min(stock,count+1));
     }
     function handleDecrease(){
         setCount(count > 0 ? count  - 1 : 0); 

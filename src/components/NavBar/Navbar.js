@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Navbar(props) {
+export default function Navbar(props) {
     const { brand,children } = props;
     return <>
         <nav>
@@ -16,4 +16,3 @@ function Navbar(props) {
 
     </>
 }
-export default Navbar;
